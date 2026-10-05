@@ -103,7 +103,7 @@ function start(host) {
     if (Math.floor(t * 30) % 2 === 0) buildThread(t, scrollK * 2.2);
     renderer.render(scene, camera);
   }
-  buildThread(0, 0); loop(performance.now());
+  buildThread(0, 0); renderer.render(scene, camera); loop(performance.now());
 
   renderer.domElement.addEventListener("webglcontextlost", (e) => { e.preventDefault(); cancelAnimationFrame(raf); host.classList.remove("live"); renderer.domElement.remove(); });
   addEventListener("pagehide", () => {
