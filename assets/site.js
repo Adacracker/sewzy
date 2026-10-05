@@ -57,6 +57,7 @@
   const how = document.querySelector(".how");
   if (how && matchMedia("(min-width: 900px)").matches) {
     const steps = how.querySelectorAll(".how-step"), shots = how.querySelectorAll(".how-phone img");
+    gsap.set([...steps].slice(1), { opacity: 0.25 });
     const tl = gsap.timeline({ scrollTrigger: { trigger: how, start: "top top", end: `+=${steps.length * 70}%`, scrub: 0.6, pin: true } });
     steps.forEach((s, i) => {
       if (i === 0) return;

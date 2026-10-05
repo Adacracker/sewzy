@@ -18,7 +18,7 @@ function start(host) {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-  camera.position.set(0, 0.4, 9.5);
+  camera.position.set(0.6, 0.2, 12.5);
 
   scene.add(new THREE.HemisphereLight(0xfff6ea, 0x1f6f5f, 1.35));
   const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(4, 6, 6); scene.add(key);
